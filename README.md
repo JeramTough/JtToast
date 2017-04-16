@@ -3,13 +3,16 @@
 
 
 **功能：**
-- 在当前屏幕顶部显示信息
+- 在当前屏幕顶部显示信息  
+
 ![Alt text](https://github.com/JeramTough/JtToast/raw/master/readme_resource/aa.png)
 
-- 在当前屏幕底部显示信息
+- 在当前屏幕底部显示信息  
+
 ![Alt text](https://github.com/JeramTough/JtToast/raw/master/readme_resource/bb.png)
 
-- 元素环绕显示信息
+- 元素环绕显示信息  
+
 ![Alt text](https://github.com/JeramTough/JtToast/raw/master/readme_resource/cc.png)
 
 ---
@@ -44,13 +47,13 @@ $toast.text("100+");    //设置Toast内容显示的文字
 ### **API**
 
 
-JtToast对象  
+##JtToast对象  
 用于显示悬浮提示信息  
 
-*1.原点在左上角，设置Toast的坐标*  
-*@param x x坐标*  
-*@param y y坐标*  
-**setPosition** (x, y)
+用途:原点在左上角，设置Toast的坐标  
+@param x x坐标  
+@param y y坐标  
+setPosition (x, y)
 
 
 ---

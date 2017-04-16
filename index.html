@@ -1,3 +1,123 @@
+# JtToast
+#### 用于显示友好的用户提示框
+
+
+**功能：**
+- 在当前屏幕顶部显示信息
+
+![Alt text](https://github.com/JeramTough/JtToast/raw/master/readme_resource/aa.png)
+
+- 在当前屏幕底部显示信息
+
+![Alt text](https://github.com/JeramTough/JtToast/raw/master/readme_resource/bb.png)
+
+- 元素环绕显示信息
+
+![Alt text](https://github.com/JeramTough/JtToast/raw/master/readme_resource/cc.png)
+
+---
+#简单用法
+
+- 第一步导入js
+
+```
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="jtToast.js"></script>
+```
+
+
+- 显示普通信息
+```
+var toast = new JtToast();//实例化Toast对象
+toast.info("普通信息");//显示普通信息
+```
+
+- 显示环绕信息
+
+```
+$toast=appendToast($("#"+id+""));  //附加Toast对象
+$toast.css("backgroundColor","#0000FF");  //设置Toast内容颜色
+$toast.text("100+");    //设置Toast内容显示的文字
+```
+
+> >
+
+---
+
+# **API**
+### JtToast对象
+*用于显示悬浮提示信息*
+
+
+
+```
+函数1
+描述：原点在左上角，设置Toast的坐标
+@param x x坐标
+@param y y坐标
+^^^^^^^^^^^^^^^^^^^^^^^^
+setPosition (x, y)
+
+函数2
+描述：设置Toast出现在当前屏幕顶部
+^^^^^^^^^^^^^^^^^^^^^^^^
+positionAtCurrentTop ()
+
+
+函数3
+描述：设置Toast出现在当前屏幕底部
+^^^^^^^^^^^^^^^^^^^^^^^^
+positionAtCurrentBottom ()
+
+函数4
+描述：显示普通的信息Toast
+@param content  要显示的内容
+@param interval  设置显示持续的时间,不填默认2000毫秒
+^^^^^^^^^^^^^^^^^^^^^^^^
+info (content, interval)
+
+函数5
+描述：显示警告的信息Toast
+@param content  要显示的内容
+@param interval  设置显示持续的时间,不填默认2000毫秒
+^^^^^^^^^^^^^^^^^^^^^^^^
+wain (content, interval)
+
+函数6
+描述：显示成功友好的信息Toast
+@param content  要显示的内容
+@param interval  设置显示持续的时间,不填默认2000毫秒
+^^^^^^^^^^^^^^^^^^^^^^^^
+nice (content, interval)
+
+```
+
+
+
+---
+### 显示环绕的Toast提示信息/**
+
+```
+函数1
+描述：将Toast附加到哪个Dom对象上
+@param o   dom对象
+@param text  Toast内容
+@returns {*|jQuery|HTMLElement}   Toast内容对象
+^^^^^^^^^^^^^^^^^^^^^^^^
+appendToast(o, text)
+
+函数2
+描述：清除Dom对象上附属的Toast对象
+@param o   dom对象
+^^^^^^^^^^^^^^^^^^^^^^^^
+clearToast(o)
+```
+
+
+---
+# 简单例子
+
+```
 <!doctype html>
 <html>
 <head>
@@ -42,7 +162,7 @@
 
         function closeAppendedToast(id) {
 
-             clearToast($("#"+id+""));
+            clearToast($("#"+id+""));
         }
 
 
@@ -62,9 +182,15 @@
 <br>
 <br>
 <div align="center">
-  <div><input id="abc" type="button" value="显示环绕Toast" onClick="showAppendedToast('abc')"/></div>
-  
-	<div><input type="button" value="关闭环绕Toast" onClick="closeAppendedToast('abc')"/></div>
+    <div><input id="abc" type="button" value="显示环绕Toast" onClick="showAppendedToast('abc')"/></div>
+
+    <div><input type="button" value="关闭环绕Toast" onClick="closeAppendedToast('abc')"/></div>
 </div>
 </body>
 </html>
+
+```
+
+
+
+
